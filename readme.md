@@ -25,4 +25,4 @@ It is considered as a side effect by UglifyJS and it skips removing of it.
 See the issues below:
 
 - [Webpack issue](https://github.com/webpack/webpack/issues/2899)
-- [Babel issue](https://phabricator.babeljs.io/T7566)
+- [UglifyJS issue](https://github.com/mishoo/UglifyJS2/issues/1261)
