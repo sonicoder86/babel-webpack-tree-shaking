@@ -2,7 +2,7 @@
   "name": "babel-webpack-tree-shaking",
   "version": "1.0.0",
   "description": "Tree-shaking example with Babel and Webpack",
-  "main": "index.js",
+  "main": "dist/car.es2015.prod.bundle.js",
   "scripts": {
     "webpack": "webpack --config webpack.config.js",
     "webpack-prod": "webpack --config webpack.prod.config.js",
