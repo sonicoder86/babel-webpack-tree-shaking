@@ -5,22 +5,31 @@
   "main": "index.js",
   "scripts": {
     "webpack": "webpack --config webpack.config.js",
-    "webpack-prod": "webpack --config webpack.prod.config.js"
+    "webpack-prod": "webpack --config webpack.prod.config.js",
+    "webpack-babili": "webpack --config webpack.prod.babili.config.js && npm run babili",
+    "babili": "babili dist/car.prod.babili.bundle.js --out-file dist/car.prod.babili.bundle.min.js",
+    "serve": "http-server -a 0.0.0.0 -p 9000"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/blacksonic/babel-webpack-tree-shaking.git"
   },
-  "keywords": ["tree-shaking", "babel", "webpack"],
+  "keywords": [
+    "tree-shaking",
+    "babel",
+    "webpack"
+  ],
   "author": {
     "name": "blacksonic",
     "email": "soos.gabor86@gmail.com"
   },
   "license": "ISC",
   "dependencies": {
-    "babel-core": "6.13.2",
+    "babel-core": "6.14.0",
     "babel-loader": "6.2.5",
-    "babel-preset-es2015": "6.13.2",
+    "babel-preset-es2015": "6.14.0",
+    "babili": "0.0.3",
+    "http-server": "0.9.0",
     "webpack": "2.1.0-beta.21"
   }
 }

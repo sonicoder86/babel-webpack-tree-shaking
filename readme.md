@@ -12,6 +12,9 @@ For development build run ```npm run webpack```.
 
 For production build run ```npm run webpack-prod```.
 
+For experimental production build run ```npm run webpack-babili```.
+It uses the [babili](https://github.com/babel/babili) ES6+ aware minifier.
+
 ### Requirements
 
 - babel-preset-es2015 >= 6.13.0
@@ -26,3 +29,8 @@ See the issues below:
 
 - [Webpack issue](https://github.com/webpack/webpack/issues/2899)
 - [UglifyJS issue](https://github.com/mishoo/UglifyJS2/issues/1261)
+
+When minifying the bundled file with babili it removes unused classes in contrary to UglifyJS,
+but it ignores ```comments: false``` flag so comments remain in the bundle.
+
+- [Babili issue](https://github.com/babel/babili/issues/67)
