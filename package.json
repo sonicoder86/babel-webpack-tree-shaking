@@ -7,7 +7,7 @@
     "webpack": "webpack --config webpack.config.js",
     "webpack-prod": "webpack --config webpack.prod.config.js",
     "webpack-babili": "webpack --config webpack.prod.babili.config.js && npm run babili",
-    "babili": "babili dist/car.prod.babili.bundle.js --out-file dist/car.prod.babili.bundle.min.js",
+    "babili": "babili dist/car.prod.babili.bundle.js --out-file dist/car.prod.babili.bundle.min.js --no-comments",
     "serve": "http-server -a 0.0.0.0 -p 9000"
   },
   "repository": {
