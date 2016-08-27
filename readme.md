@@ -8,11 +8,13 @@ The source code can be found in the ```app/``` folder,
 where the main file ```car.js``` doesn't use all the dependencies from ```engine.js```.
 The built and transpiled files can be found in the ```/dist``` folder.
 
-For development build run ```npm run webpack```.
+For development build run ```npm run webpack``` (ES2015 -> ES5 bundle).
 
-For production build run ```npm run webpack-prod```.
+For production build run ```npm run webpack-prod``` (ES2015 -> ES5 bundle -> UglifyJS).
 
-For experimental production build run ```npm run webpack-babili```.
+For ES2015 development build run ```npm run webpack-es2015``` (ES2015 -> ES2015 bundle).
+
+For experimental production build run ```npm run webpack-es2015-prod``` (ES2015 -> ES2015 bundle -> Babili).
 It uses the [Babili](https://github.com/babel/babili) ES6+ aware minifier 
 and solves the issues what UglifyJS has.
 

@@ -6,8 +6,9 @@
   "scripts": {
     "webpack": "webpack --config webpack.config.js",
     "webpack-prod": "webpack --config webpack.prod.config.js",
-    "webpack-babili": "webpack --config webpack.prod.babili.config.js && npm run babili",
-    "babili": "babili dist/car.prod.babili.bundle.js --out-file dist/car.prod.babili.bundle.min.js --no-comments",
+    "webpack-es2015": "webpack --config webpack.es2015.config.js",
+    "webpack-es2015-prod": "npm run webpack-es2015 && npm run babili",
+    "babili": "babili dist/car.es2015.bundle.js --out-file dist/car.es2015.prod.bundle.js --no-comments",
     "serve": "http-server -a 0.0.0.0 -p 9000"
   },
   "repository": {

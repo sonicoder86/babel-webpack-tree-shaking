@@ -4,7 +4,7 @@ let path = require('path');
 
 module.exports = {
   entry: {
-    'car.prod.babili': './app/car.js'
+    'car.es2015': './app/car.js'
   },
 
   output: {
