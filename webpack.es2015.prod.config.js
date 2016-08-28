@@ -1,5 +1,4 @@
 'use strict';
-let webpack = require('webpack');
 let BabiliPlugin = require("babili-webpack-plugin");
 let path = require('path');
 
