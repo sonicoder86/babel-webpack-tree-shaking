@@ -7,8 +7,7 @@
     "webpack": "webpack --config webpack.config.js",
     "webpack-prod": "webpack --config webpack.prod.config.js",
     "webpack-es2015": "webpack --config webpack.es2015.config.js",
-    "webpack-es2015-prod": "npm run webpack-es2015 && npm run babili",
-    "babili": "babili dist/car.es2015.bundle.js --out-file dist/car.es2015.prod.bundle.js --no-comments",
+    "webpack-es2015-prod": "webpack --config webpack.es2015.prod.config.js",
     "serve": "http-server -a 0.0.0.0 -p 9000"
   },
   "repository": {
@@ -32,6 +31,7 @@
     "babel-preset-es2015": "^6.14.0",
     "babel-preset-latest": "^6.14.0",
     "babili": "^0.0.3",
+    "babili-webpack-plugin": "^0.0.2",
     "http-server": "^0.9.0",
     "webpack": "^2.1.0-beta.21"
   }
