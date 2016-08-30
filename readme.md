@@ -1,4 +1,5 @@
 # Tree-shaking example with Babel and Webpack
+[![devDependency Status](https://david-dm.org/blacksonic/babel-webpack-tree-shaking/dev-status.svg)](https://david-dm.org/blacksonic/babel-webpack-tree-shaking#info=devDependencies)
 
 This repository shows how to configure Babel and Webpack to enable tree-shaking for development and production builds.
 
