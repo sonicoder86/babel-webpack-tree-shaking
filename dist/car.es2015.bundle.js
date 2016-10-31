@@ -69,17 +69,22 @@
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
-/* unused harmony export getVersion */class V6Engine {
+/* unused harmony export getVersion */
+class V6Engine {
   toString() {
     return 'V6';
   }
-}/* unused harmony export V6Engine */
+}
+/* unused harmony export V6Engine */
+
 
 class V8Engine {
   toString() {
     return 'V8';
   }
-}/* harmony export */ exports["a"] = V8Engine;
+}
+/* harmony export (immutable) */ exports["a"] = V8Engine;
+
 
 function getVersion() {
   return '1.0';

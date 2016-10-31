@@ -70,7 +70,9 @@
 
 "use strict";
 /* unused harmony export V6Engine */
-/* harmony export */ __webpack_require__.d(exports, "a", function() { return V8Engine; });/* unused harmony export getVersion */function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+/* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return V8Engine; });
+/* unused harmony export getVersion */
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var V6Engine = function () {
   function V6Engine() {

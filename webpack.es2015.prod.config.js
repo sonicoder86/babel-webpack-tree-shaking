@@ -13,7 +13,7 @@ module.exports = {
   },
 
   module: {
-    loaders: []
+    rules: []
   },
 
   plugins: [
@@ -21,8 +21,11 @@ module.exports = {
   ],
 
   resolve: {
-    root: [ path.join(__dirname, 'app') ],
-    extensions: ['', '.js']
+    modules: [
+      path.join(process.cwd(), 'app'),
+      'node_modules'
+    ],
+    extensions: ['.js', '.json']
   },
 
   devtool: false
