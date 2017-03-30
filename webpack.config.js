@@ -1,4 +1,5 @@
 'use strict';
+
 let path = require('path');
 
 module.exports = {
@@ -7,7 +8,7 @@ module.exports = {
   },
 
   output: {
-    path: './dist',
+    path: path.resolve(process.cwd(), 'dist'),
     filename: '[name].bundle.js'
   },
 

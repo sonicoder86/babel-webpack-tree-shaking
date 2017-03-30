@@ -1,4 +1,5 @@
 'use strict';
+
 let BabiliPlugin = require("babili-webpack-plugin");
 let path = require('path');
 
@@ -8,7 +9,7 @@ module.exports = {
   },
 
   output: {
-    path: './dist',
+    path: path.resolve(process.cwd(), 'dist'),
     filename: '[name].bundle.js'
   },
 
