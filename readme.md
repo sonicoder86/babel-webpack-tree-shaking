@@ -1,52 +1,38 @@
 # Tree-shaking example with Babel and Webpack
 [![devDependency Status](https://david-dm.org/blacksonic/babel-webpack-tree-shaking/dev-status.svg)](https://david-dm.org/blacksonic/babel-webpack-tree-shaking?type=dev)
 
-This repository shows how to configure Babel and Webpack to enable tree-shaking for development and production builds.
-
-It will eliminate dead code not used by other modules if they have ES2015 module format.
+This repository shows how to configure Babel and Webpack to enable tree-shaking.
+It will eliminate dead code if they have ES2015 module format.
 
 The source code can be found in the ```app/``` folder,
 where the main file ```car.js``` doesn't use all the dependencies from ```engine.js```.
 The built and transpiled files can be found in the ```/dist``` folder.
 
+Webpack only marks unused code at bundling and leaves the removing part to minifiers.
+This is why all the code is included in development builds in contrary to Rollup.
+
+### Webpack + Babel + UglifyJS
+
+Can only remove unused functions and variables.
+
 For development build run ```npm run webpack``` (ES2015 -> ES5 bundle).
 
 For production build run ```npm run webpack-prod``` (ES2015 -> ES5 bundle -> UglifyJS).
-
-For ES2015 development build run ```npm run webpack-es2015``` (ES2015 -> ES2015 bundle).
-
-For experimental production build run ```npm run webpack-es2015-prod``` (ES2015 -> ES2015 bundle -> Babili).
-It uses the [Babili](https://github.com/babel/babili) ES6+ aware minifier 
-and solves the issues what UglifyJS has.
-
-Will replace UglifyJS with Babili when it gets stable.
-
-It uses ```babel-preset-latest```, which includes ES2016 and ES2017 features also.
-If you want only ES2015 replace the presets in ```.babelrc``` to this:
-
-```
-"presets": [
-  [
-    "es2015",
-    {
-      "loose": true,
-      "modules": false
-    }
-  ]
-]
-```
-
-### Requirements
-
-- babel-preset-es2015 >= 6.13.0 or babel-preset-latest
-- webpack >= 2.1.0-beta
-
-### Known issues
 
 When transpiling classes with Babel, it generates an IIFE with an assignment to the prototype.
 It is considered as a side effect by UglifyJS and it skips removing of it.
 
 See the issues below:
 
-- [Webpack issue](https://github.com/webpack/webpack/issues/2899)
+- [Webpack issue](https://github.com/webpack/webpack/issues/2899) and a [more detailed one](https://github.com/webpack/webpack/issues/2867)
 - [UglifyJS issue](https://github.com/mishoo/UglifyJS2/issues/1261)
+
+### Webpack + Babili
+
+Can remove unused classes, functions and variables.
+
+For development build run ```npm run webpack-es2015``` (ES2015 -> ES2015 bundle).
+
+For production build run ```npm run webpack-es2015-prod``` (ES2015 -> ES2015 bundle -> Babili).
+
+It uses the [Babili](https://github.com/babel/babili) ES6+ aware minifier and solves the issues what UglifyJS has.
