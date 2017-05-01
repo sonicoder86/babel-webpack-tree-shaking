@@ -11,6 +11,9 @@ The built and transpiled files can be found in the ```/dist``` folder.
 Webpack only marks unused code at bundling and leaves the removing part to minifiers.
 This is why all the code is included in development builds in contrary to Rollup.
 
+If you want a more detailed explanation,
+[read this article](https://blog.craftlab.hu/how-to-do-proper-tree-shaking-in-webpack-2-e27852af8b21).
+
 ### Webpack + Babel + UglifyJS
 
 Can only remove unused functions and variables.
