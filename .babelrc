@@ -4,5 +4,6 @@
       "loose": true,
       "modules": false
     }]
-  ]
+  ],
+  "plugins": ["transform-runtime"]
 }
